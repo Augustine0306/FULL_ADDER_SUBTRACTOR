@@ -39,17 +39,59 @@ Borrow out = A'Bin + A'B + BBin
 **Truthtable**
 
 **Procedure**
+Full Adder
 
-Write the detailed procedure here
+1. Open Quartus || and create a new project.
 
+2. Use schematic design entry to draw the full adder circuit.
+
+3. The circuit consists of XOR,AND,and OR gates.
+
+4.Compile the design,verify its functionality through simulation.
+
+5.Implement the design ,verify its functionality through simulation.
+
+Full Subtractor
+
+1. Follow the same steps as for the full adder.
+2. Draw the full subtractor circuit using schematic design.
+3. The circuit includes XOR,AND,OR gates to perform subtraction.
+4. Compile,simulate,implement,and program the design similarly to the full adder.
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
+
+Developed by:AUGUSTINE J
+
+RegisterNumber:212222240015
 */
+```
+//full adder
+module fulladd(sum,cout,a,b,cin);
+   output sum;
+	output cout;
+	input a;
+   input b;
+   input cin;
+  
+        //Internal nets
+ wire sl,cl,c2;
+
+  //Instantiate logic gate primitives
+ xor(sl,a,b);
+ and(cl,a,b);
+ xor(sum,sl,cin);
+ and(c2,sl,cin);
+ or(cout,c2,cl);
+ endmodule
+```
+![image](https://github.com/Augustine0306/FULL_ADDER_SUBTRACTOR/assets/119404460/6ca68111-08e0-4426-a81b-5843f21a863d)
 
 **RTL Schematic**
+![image](https://github.com/Augustine0306/FULL_ADDER_SUBTRACTOR/assets/119404460/e836ed94-1fa4-43b0-b9af-c3c5796cb432)
 
 **Output Timing Waveform**
+![image](https://github.com/Augustine0306/FULL_ADDER_SUBTRACTOR/assets/119404460/d363a735-3695-449b-a96a-42a3d30e26af)
 
 **Result:**
 
